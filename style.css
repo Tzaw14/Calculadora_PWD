@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background-color: #121212;
+    background-color: #e0f7ff; /* celeste claro de fondo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,80 +19,86 @@ body {
 
 header {
     text-align: center;
-    color: #ffcc00;
-    font-size: 2rem;
+    color: #1e90ff;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 0 0 5px #b0e0ff;
 }
 
+/* Calculadora */
 .calculadora {
-    background: linear-gradient(145deg, #010022, #0a0d1d);
-    color: #fff;
+    background: linear-gradient(145deg, #d6f1ff, #b8e6ff); /* fondo suave azul pastel */
+    color: #333;
     width: 90%;
     max-width: 400px;
-    padding: 1.8rem;
-    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: .7rem;
-    box-shadow: 0 0 20px #ffcc00;
+    gap: 1rem;
+    box-shadow: 0 0 25px #aee1ff;
+    border: 3px solid #1e90ff;
 }
 
 /* Pantalla */
 .pantalla {
     grid-column: span 4;
-    background-color: #002c04;
-    padding: 2rem;
-    font-size: 2.5rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    font-size: 2.2rem;
     text-align: right;
-    border-radius: .5rem;
+    border-radius: 1rem;
     margin-bottom: 1rem;
-    color: #ffcc00;
-    border: 2px solid #ffcc00;
+    color: #1e90ff;
+    border: 2px dashed #87cefa;
     word-wrap: break-word;
     min-height: 60px;
 }
 
-/* Botones */
+/* Botones generales */
 .btn {
-    background: linear-gradient(145deg, #262626, #1a1a1a);
-    color: #ffcc00;
-    border: 1px solid #ffcc00;
-    padding: 1.5rem;
+    background: #e3f5ff;
+    color: #1e90ff;
+    border: 2px solid #aee1ff;
+    padding: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: .5rem;
+    border-radius: 1rem;
     cursor: pointer;
-    font-size: 1.3rem;
-    transition: 0.2s ease-in-out;
+    font-size: 1.4rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
-    background-color: #ffcc00;
-    color: #ff3c00;
-    transform: scale(1.1);
+    background-color: #c9eaff;
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #aee1ff;
 }
 
 /* Botón especial "C" */
 #c {
-    background-color: #ff3300;
+    background-color: #ffa500;
     color: white;
     border: none;
+    font-weight: bold;
 }
 
 #c:hover {
-    background-color: #ff6666;
+    background-color: #ffc04d;
 }
 
 /* Botón de igual */
 #igual {
     grid-row: span 2;
-    background-color: #0066ff;
+    background-color: #1e90ff;
     color: white;
+    font-weight: bold;
 }
 
 #igual:hover {
-    background-color: #3399ff;
+    background-color: #5aaeff;
 }
 
 /* Botón 0 más grande */
@@ -98,15 +106,15 @@ header {
     grid-column: span 2;
 }
 
-/* Media Query para dispositivos móviles */
+/* Responsivo */
 @media (max-width: 480px) {
     .pantalla {
-        font-size: 2rem;
-        padding: 1.5rem;
+        font-size: 1.8rem;
+        padding: 1.2rem;
     }
 
     .btn {
         font-size: 1.1rem;
-        padding: 1.2rem;
+        padding: 1.1rem;
     }
 }
